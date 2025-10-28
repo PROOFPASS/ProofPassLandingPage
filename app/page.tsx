@@ -1,13 +1,17 @@
 import { Header } from "@/components/shared/Header"
 import { Footer } from "@/components/shared/Footer"
+
+// NEW SECTIONS - Complete Redesign
 import { HeroNew } from "@/components/sections/HeroNew"
 import { WhatIsProofPass } from "@/components/sections/WhatIsProofPass"
+import { ConcreteUseCases } from "@/components/sections/ConcreteUseCases"
+import { ThreeServices } from "@/components/sections/ThreeServices"
+import { VsAlternatives } from "@/components/sections/VsAlternatives"
 import { PricingNew } from "@/components/sections/PricingNew"
-import { FinalCTA } from "@/components/sections/FinalCTA"
+import { CompleteFAQ } from "@/components/sections/CompleteFAQ"
+import { FinalCTANew } from "@/components/sections/FinalCTANew"
 
-// Keeping some sections from old design temporarily
-import { Problem } from "@/components/sections/Problem"
-import { UseCases } from "@/components/sections/UseCases"
+// Keeping these temporarily
 import { TrustSignals } from "@/components/sections/TrustSignals"
 import { SocialProof } from "@/components/sections/SocialProof"
 
@@ -16,21 +20,17 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
 
-      {/* NEW SECTIONS - Shopify Style */}
+      {/* COMPLETE REDESIGN - Shopify Style in Spanish */}
       <HeroNew />
       <WhatIsProofPass />
-
-      {/* KEEPING FROM OLD (temporarily) */}
-      <Problem />
-      <UseCases />
-
-      {/* NEW SECTIONS */}
+      <ConcreteUseCases />
+      <ThreeServices />
+      <VsAlternatives />
       <PricingNew />
-
-      {/* KEEPING FROM OLD */}
       <TrustSignals />
       <SocialProof />
-      <FinalCTA />
+      <CompleteFAQ />
+      <FinalCTANew />
 
       <Footer />
 
@@ -49,7 +49,7 @@ export default function Home() {
               "highPrice": "199",
               "priceCurrency": "EUR"
             },
-            "description": "Como DocuSign para tu Supply Chain. Crea pruebas digitales verificables de cualquier evento de negocio.",
+            "description": "Como DocuSign para tu Supply Chain. Crea pruebas digitales verificables de cualquier evento de negocio. Sin blockchain expertise. Open source.",
             "operatingSystem": "Web",
             "keywords": "attestations, blockchain, compliance, supply chain, traceability, zero-knowledge proofs"
           })

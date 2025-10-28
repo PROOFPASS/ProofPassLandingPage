@@ -8,22 +8,22 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "ProofPass - Verifiable Attestations for Regulated Industries",
-  description: "Create cryptographically-signed proofs for any business event. Prove compliance without revealing sensitive data. Open source blockchain platform.",
-  keywords: ["attestations", "blockchain", "compliance", "supply chain", "traceability", "zero-knowledge proofs", "verifiable credentials"],
+  title: "ProofPass - Como DocuSign para tu Supply Chain",
+  description: "Crea pruebas digitales verificables de cualquier evento de negocio. Sin blockchain expertise. Sin vendor lock-in. Open source.",
+  keywords: ["attestations", "blockchain", "compliance", "supply chain", "trazabilidad", "zero-knowledge proofs", "verificación digital"],
   authors: [{ name: "ProofPass" }],
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "es_ES",
     url: "https://proofpass.com",
-    title: "ProofPass - Verifiable Attestations for Regulated Industries",
-    description: "Create cryptographically-signed proofs for any business event. Prove compliance without revealing sensitive data.",
+    title: "ProofPass - Como DocuSign para tu Supply Chain",
+    description: "Crea pruebas digitales verificables de cualquier evento de negocio. Tus clientes y partners pueden verificar al instante.",
     siteName: "ProofPass",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ProofPass - Verifiable Attestations for Regulated Industries",
-    description: "Create cryptographically-signed proofs for any business event. Prove compliance without revealing sensitive data.",
+    title: "ProofPass - Como DocuSign para tu Supply Chain",
+    description: "Crea pruebas digitales verificables. Sin blockchain expertise. Open source.",
   },
   robots: {
     index: true,
