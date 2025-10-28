@@ -15,27 +15,39 @@ export function EnterpriseCTA() {
 
     const formData = new FormData(e.currentTarget)
 
-    console.log("Form data:", Object.fromEntries(formData))
+    // Convert to JSON
+    const data: Record<string, string> = {}
+    formData.forEach((value, key) => {
+      if (key !== 'botcheck' && key !== 'access_key') {
+        data[key] = value.toString()
+      }
+    })
 
-    // Send to Web3Forms
+    console.log("Sending form:", data)
+
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // Using Formspree - more reliable than Web3Forms
+      const response = await fetch("https://formspree.io/f/meoqrdyz", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
       })
 
-      const data = await response.json()
-      console.log("Web3Forms response:", data)
+      console.log("Response:", response.status, response.statusText)
 
-      if (data.success) {
+      if (response.ok) {
         setSubmitStatus("success")
         e.currentTarget.reset()
       } else {
-        console.error("Web3Forms error:", data.message)
+        const errorData = await response.json().catch(() => ({}))
+        console.error("Form error:", errorData)
         setSubmitStatus("error")
       }
     } catch (error) {
-      console.error("Form submission error:", error)
+      console.error("Submission error:", error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -57,14 +69,8 @@ export function EnterpriseCTA() {
         {/* Form */}
         <div className="bg-white rounded-lg p-8 lg:p-12 shadow-xl mb-8">
           <form onSubmit={handleSubmit} className="space-y-4 mb-6">
-            {/* Web3Forms Access Key */}
-            <input
-              type="hidden"
-              name="access_key"
-              value="397a2065-5ecd-4a98-a2ff-7bbda99b7ecc"
-            />
-            <input type="hidden" name="subject" value="ProofPass Demo Request" />
-            <input type="checkbox" name="botcheck" style={{display: "none"}} tabIndex={-1} />
+            {/* Anti-spam honeypot */}
+            <input type="text" name="_gotcha" style={{display: "none"}} tabIndex={-1} />
 
             <div className="grid md:grid-cols-2 gap-4">
               <div>
