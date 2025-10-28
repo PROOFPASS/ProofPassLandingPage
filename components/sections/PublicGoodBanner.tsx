@@ -29,16 +29,16 @@ export function PublicGoodBanner() {
             </div>
 
             <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
-              Becoming a Recognized Digital Public Good
+              Nominated as a Digital Public Good
             </h3>
 
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-              ProofPass is open source and in the process of recognition by the{" "}
+              ProofPass is open source and has been{" "}
               <span className="font-semibold text-foreground">
-                Digital Public Goods Alliance (DPGA)
+                nominated for recognition by the Digital Public Goods Alliance (DPGA)
               </span>
-              . This certification validates our commitment to transparency, accessibility,
-              and global impact.
+              . This nomination validates our commitment to transparency, accessibility,
+              and global impact as we work towards full DPG certification.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4 mb-4">

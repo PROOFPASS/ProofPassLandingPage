@@ -5,16 +5,16 @@ import { Shield, Lock, Eye, Server, FileCheck, Users } from "lucide-react"
 export function SecurityCompliance() {
   const certifications = [
     {
-      icon: Shield,
-      title: "SOC 2 Type II",
-      subtitle: "Certified",
-      description: "Annual audits by Big 4",
-    },
-    {
       icon: FileCheck,
       title: "ISO 27001",
       subtitle: "Certified",
       description: "Information security",
+    },
+    {
+      icon: Shield,
+      title: "W3C Standards",
+      subtitle: "Compliant",
+      description: "Verifiable Credentials standard",
     },
     {
       icon: Eye,

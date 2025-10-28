@@ -51,7 +51,7 @@ export default function Home() {
               "highPrice": "50000",
               "priceCurrency": "EUR"
             },
-            "description": "Enterprise-grade platform for creating cryptographically-signed proofs of business events. Enable instant verification across your supply chain. Built for regulated industries. SOC 2 Type II certified.",
+            "description": "Enterprise-grade platform for creating cryptographically-signed proofs of business events. Enable instant verification across your supply chain. Built for regulated industries. ISO 27001 certified. Open source.",
             "operatingSystem": "Web",
             "keywords": "attestations, blockchain, compliance, supply chain, traceability, zero-knowledge proofs, enterprise, B2B, W3C credentials, digital public good"
           })

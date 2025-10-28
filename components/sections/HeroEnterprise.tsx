@@ -52,9 +52,9 @@ export function HeroEnterprise() {
               <div>
                 <div className="flex items-center gap-2 text-foreground font-semibold mb-1">
                   <CheckCircle2 className="h-5 w-5 text-secondary" />
-                  SOC 2 Type II
+                  Open Source
                 </div>
-                <p className="text-sm text-muted-foreground">Security certified</p>
+                <p className="text-sm text-muted-foreground">No vendor lock-in</p>
               </div>
             </div>
 

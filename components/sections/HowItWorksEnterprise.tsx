@@ -49,9 +49,9 @@ export function HowItWorksEnterprise() {
       items: [
         "99.9% uptime SLA",
         "Multi-region deployment",
-        "SOC 2 Type II certified",
         "ISO 27001 compliant",
         "GDPR compliant",
+        "W3C VC standard",
       ],
     },
     {

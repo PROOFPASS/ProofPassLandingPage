@@ -131,7 +131,7 @@ export function FooterEnterprise() {
               © 2025 ProofPass Inc. All rights reserved.
             </p>
             <p className="text-xs">
-              ISO 27001 Certified | SOC 2 Type II | GDPR Compliant
+              ISO 27001 Certified | GDPR Compliant | Open Source
             </p>
           </div>
 
