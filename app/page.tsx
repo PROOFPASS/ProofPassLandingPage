@@ -8,7 +8,7 @@ import { SocialProofEnterprise } from "@/components/sections/SocialProofEnterpri
 import { ProblemStatement } from "@/components/sections/ProblemStatement"
 import { SolutionTiers } from "@/components/sections/SolutionTiers"
 import { HowItWorksEnterprise } from "@/components/sections/HowItWorksEnterprise"
-import { IndustryUseCases } from "@/components/sections/IndustryUseCases"
+import { DetailedCaseStudies } from "@/components/sections/DetailedCaseStudies"
 import { ComparisonTableEnterprise } from "@/components/sections/ComparisonTableEnterprise"
 import { PricingEnterprise } from "@/components/sections/PricingEnterprise"
 import { SecurityCompliance } from "@/components/sections/SecurityCompliance"
@@ -27,7 +27,7 @@ export default function Home() {
       <ProblemStatement />
       <SolutionTiers />
       <HowItWorksEnterprise />
-      <IndustryUseCases />
+      <DetailedCaseStudies />
       <ComparisonTableEnterprise />
       <PricingEnterprise />
       <SecurityCompliance />
