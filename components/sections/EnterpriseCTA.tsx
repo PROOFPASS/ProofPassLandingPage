@@ -13,12 +13,13 @@ export function EnterpriseCTA() {
     setIsSubmitting(true)
     setSubmitStatus("idle")
 
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
 
     // Convert to JSON
     const data: Record<string, string> = {}
     formData.forEach((value, key) => {
-      if (key !== 'botcheck' && key !== 'access_key') {
+      if (key !== '_gotcha') {
         data[key] = value.toString()
       }
     })
@@ -40,7 +41,10 @@ export function EnterpriseCTA() {
 
       if (response.ok) {
         setSubmitStatus("success")
-        e.currentTarget.reset()
+        // Reset form safely
+        if (form) {
+          form.reset()
+        }
       } else {
         const errorData = await response.json().catch(() => ({}))
         console.error("Form error:", errorData)
