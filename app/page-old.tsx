@@ -1,37 +1,32 @@
 import { Header } from "@/components/shared/Header"
 import { Footer } from "@/components/shared/Footer"
-import { HeroNew } from "@/components/sections/HeroNew"
-import { WhatIsProofPass } from "@/components/sections/WhatIsProofPass"
-import { PricingNew } from "@/components/sections/PricingNew"
-import { FinalCTA } from "@/components/sections/FinalCTA"
-
-// Keeping some sections from old design temporarily
+import { Hero } from "@/components/sections/Hero"
 import { Problem } from "@/components/sections/Problem"
+import { Services } from "@/components/sections/Services"
+import { HowItWorks } from "@/components/sections/HowItWorks"
 import { UseCases } from "@/components/sections/UseCases"
+import { Comparison } from "@/components/sections/Comparison"
+import { Pricing } from "@/components/sections/Pricing"
 import { TrustSignals } from "@/components/sections/TrustSignals"
 import { SocialProof } from "@/components/sections/SocialProof"
+import { Resources } from "@/components/sections/Resources"
+import { FinalCTA } from "@/components/sections/FinalCTA"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen">
       <Header />
-
-      {/* NEW SECTIONS - Shopify Style */}
-      <HeroNew />
-      <WhatIsProofPass />
-
-      {/* KEEPING FROM OLD (temporarily) */}
+      <Hero />
       <Problem />
+      <Services />
+      <HowItWorks />
       <UseCases />
-
-      {/* NEW SECTIONS */}
-      <PricingNew />
-
-      {/* KEEPING FROM OLD */}
+      <Comparison />
+      <Pricing />
       <TrustSignals />
       <SocialProof />
+      <Resources />
       <FinalCTA />
-
       <Footer />
 
       {/* JSON-LD Structured Data */}
@@ -49,7 +44,7 @@ export default function Home() {
               "highPrice": "199",
               "priceCurrency": "EUR"
             },
-            "description": "Como DocuSign para tu Supply Chain. Crea pruebas digitales verificables de cualquier evento de negocio.",
+            "description": "Create cryptographically-signed proofs for any business event. Prove compliance without revealing sensitive data. Open source blockchain platform.",
             "operatingSystem": "Web",
             "keywords": "attestations, blockchain, compliance, supply chain, traceability, zero-knowledge proofs"
           })
