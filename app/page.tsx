@@ -6,8 +6,11 @@ import { HeroNew } from "@/components/sections/HeroNew"
 import { WhatIsProofPass } from "@/components/sections/WhatIsProofPass"
 import { ConcreteUseCases } from "@/components/sections/ConcreteUseCases"
 import { ThreeServices } from "@/components/sections/ThreeServices"
+import { TrustNetwork } from "@/components/sections/TrustNetwork"
+import { Integration } from "@/components/sections/Integration"
 import { VsAlternatives } from "@/components/sections/VsAlternatives"
 import { PricingNew } from "@/components/sections/PricingNew"
+import { ResourcesNew } from "@/components/sections/Resources"
 import { CompleteFAQ } from "@/components/sections/CompleteFAQ"
 import { FinalCTANew } from "@/components/sections/FinalCTANew"
 
@@ -25,8 +28,11 @@ export default function Home() {
       <WhatIsProofPass />
       <ConcreteUseCases />
       <ThreeServices />
+      <TrustNetwork />
+      <Integration />
       <VsAlternatives />
       <PricingNew />
+      <ResourcesNew />
       <TrustSignals />
       <SocialProof />
       <CompleteFAQ />
