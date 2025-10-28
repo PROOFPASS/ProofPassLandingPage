@@ -400,7 +400,7 @@ const webhook = await proofpass.webhooks.create({
                   <code className="text-xs text-foreground font-mono">{codeExamples.pythonExample}</code>
                 </pre>
                 <Button size="sm" variant="outline" className="w-full" asChild>
-                  <a href="https://github.com/PROOFPASS/proofpass-python" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/PROOFPASS/ProofPassPlatform" target="_blank" rel="noopener noreferrer">
                     View on GitHub
                   </a>
                 </Button>
@@ -425,7 +425,7 @@ const webhook = await proofpass.webhooks.create({
                   <code className="text-xs text-foreground font-mono">{codeExamples.goExample}</code>
                 </pre>
                 <Button size="sm" variant="outline" className="w-full" asChild>
-                  <a href="https://github.com/PROOFPASS/proofpass-go" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/PROOFPASS/ProofPassPlatform" target="_blank" rel="noopener noreferrer">
                     View on GitHub
                   </a>
                 </Button>
