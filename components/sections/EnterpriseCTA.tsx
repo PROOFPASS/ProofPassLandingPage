@@ -15,6 +15,8 @@ export function EnterpriseCTA() {
 
     const formData = new FormData(e.currentTarget)
 
+    console.log("Form data:", Object.fromEntries(formData))
+
     // Send to Web3Forms
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -23,14 +25,17 @@ export function EnterpriseCTA() {
       })
 
       const data = await response.json()
+      console.log("Web3Forms response:", data)
 
       if (data.success) {
         setSubmitStatus("success")
         e.currentTarget.reset()
       } else {
+        console.error("Web3Forms error:", data.message)
         setSubmitStatus("error")
       }
     } catch (error) {
+      console.error("Form submission error:", error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -56,13 +61,25 @@ export function EnterpriseCTA() {
             <input
               type="hidden"
               name="access_key"
-              value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "YOUR_WEB3FORMS_ACCESS_KEY"}
+              value="397a2065-5ecd-4a98-a2ff-7bbda99b7ecc"
             />
-            <input type="hidden" name="subject" value="New Enterprise Demo Request - ProofPass" />
-            <input type="hidden" name="from_name" value="ProofPass Landing Page" />
-            <input type="checkbox" name="botcheck" className="hidden" style={{display: "none"}} />
+            <input type="hidden" name="subject" value="ProofPass Demo Request" />
+            <input type="checkbox" name="botcheck" style={{display: "none"}} tabIndex={-1} />
 
             <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="John Doe"
+                  className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:border-accent"
+                  required
+                  disabled={isSubmitting}
+                />
+              </div>
               <div>
                 <label className="block text-sm font-semibold text-foreground mb-2">
                   Work Email *
@@ -76,6 +93,9 @@ export function EnterpriseCTA() {
                   disabled={isSubmitting}
                 />
               </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-semibold text-foreground mb-2">
                   Company *
@@ -86,6 +106,18 @@ export function EnterpriseCTA() {
                   placeholder="ACME Inc."
                   className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:border-accent"
                   required
+                  disabled={isSubmitting}
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">
+                  Phone (optional)
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+1 (555) 123-4567"
+                  className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:border-accent"
                   disabled={isSubmitting}
                 />
               </div>
