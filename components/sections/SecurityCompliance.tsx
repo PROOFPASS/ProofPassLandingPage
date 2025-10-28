@@ -65,7 +65,7 @@ export function SecurityCompliance() {
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="security" className="py-20 px-4 sm:px-6 lg:px-8 bg-white scroll-mt-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

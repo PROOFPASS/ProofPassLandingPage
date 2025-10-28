@@ -71,7 +71,7 @@ export function SolutionTiers() {
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
+    <section id="platform" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted scroll-mt-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

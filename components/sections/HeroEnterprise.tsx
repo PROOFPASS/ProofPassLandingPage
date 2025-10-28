@@ -60,17 +60,19 @@ export function HeroEnterprise() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" className="bg-accent hover:bg-accent-600 text-white shadow-md">
-                Request Enterprise Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="bg-accent hover:bg-accent-600 text-white shadow-md" asChild>
+                <a href="#contact">
+                  Request Enterprise Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-2">
-                View Documentation
+              <Button size="lg" variant="outline" className="border-2" asChild>
+                <a href="/docs">View Documentation</a>
               </Button>
             </div>
 
             <a
-              href="#"
+              href="/docs"
               className="inline-flex items-center gap-2 text-accent hover:text-accent-600 font-medium transition-colors"
             >
               <FileText className="h-4 w-4" />

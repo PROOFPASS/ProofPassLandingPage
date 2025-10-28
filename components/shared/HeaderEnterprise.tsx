@@ -44,12 +44,14 @@ export function HeaderEnterprise() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Sign In
+            <Button variant="ghost" size="sm" asChild>
+              <a href="#contact">Sign In</a>
             </Button>
-            <Button size="sm" className="bg-accent hover:bg-accent-600 text-white">
-              Request Demo
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button size="sm" className="bg-accent hover:bg-accent-600 text-white" asChild>
+              <a href="#contact">
+                Request Demo
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </Button>
           </div>
 
@@ -81,12 +83,14 @@ export function HeaderEnterprise() {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="w-full justify-start">
-                  Sign In
+                <Button variant="ghost" size="sm" className="w-full justify-start" asChild>
+                  <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Sign In</a>
                 </Button>
-                <Button size="sm" className="w-full bg-accent hover:bg-accent-600 text-white">
-                  Request Demo
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button size="sm" className="w-full bg-accent hover:bg-accent-600 text-white" asChild>
+                  <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                    Request Demo
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </div>
             </div>

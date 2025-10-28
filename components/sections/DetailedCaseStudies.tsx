@@ -185,7 +185,7 @@ export function DetailedCaseStudies() {
   const Icon = activeData.icon
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8 bg-white scroll-mt-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -328,9 +328,11 @@ export function DetailedCaseStudies() {
           <p className="text-lg text-muted-foreground mb-6">
             Want to see how ProofPass can solve your specific challenges?
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent-600 text-white">
-            Schedule Technical Deep-Dive
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button size="lg" className="bg-accent hover:bg-accent-600 text-white" asChild>
+            <a href="#contact">
+              Schedule Technical Deep-Dive
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </div>
       </div>

@@ -81,7 +81,7 @@ export function PricingEnterprise() {
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white scroll-mt-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -172,9 +172,12 @@ export function PricingEnterprise() {
                     : "bg-white border-2 border-border hover:bg-muted"
                 }`}
                 size="lg"
+                asChild
               >
-                {plan.cta}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <a href="#contact">
+                  {plan.cta}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </div>
           ))}
