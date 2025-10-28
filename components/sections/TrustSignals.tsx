@@ -39,14 +39,9 @@ export function TrustSignals() {
       logo: "🌐",
     },
     {
-      name: "Stellar Network",
-      description: "Fast, low-cost blockchain",
-      logo: "⭐",
-    },
-    {
-      name: "Optimism L2",
-      description: "Ethereum Layer 2 scaling",
-      logo: "🔴",
+      name: "Multi-Chain Support",
+      description: "Flexible blockchain integration",
+      logo: "⛓️",
     },
     {
       name: "Open Source",

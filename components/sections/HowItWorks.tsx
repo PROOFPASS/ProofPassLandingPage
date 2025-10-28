@@ -24,10 +24,10 @@ export function HowItWorks() {
       icon: Link2,
       title: "Anchor",
       subtitle: "Blockchain Timestamp",
-      description: "Cryptographic signature. Blockchain timestamp on Stellar or Optimism. Immutable proof stored forever.",
+      description: "Cryptographic signature. Blockchain timestamp for immutable proof stored forever.",
       features: [
         "Ed25519 cryptographic signatures",
-        "Choose Stellar or Optimism",
+        "Multiple blockchain support",
         "<5 second finality",
         "Permanent, tamper-proof record",
       ],

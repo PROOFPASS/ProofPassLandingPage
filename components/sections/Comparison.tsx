@@ -77,8 +77,8 @@ export function Comparison() {
     },
     {
       emoji: "⛓️",
-      title: "Stellar + Optimism",
-      description: "Flexibility + ultra-low costs",
+      title: "Multi-chain flexibility",
+      description: "Support for multiple blockchains",
     },
   ]
 

@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "ProofPass - Verifiable Attestations for Regulated Industries",
-  description: "Create cryptographically-signed proofs for any business event. Prove compliance without revealing sensitive data. Built on Stellar and Optimism.",
+  description: "Create cryptographically-signed proofs for any business event. Prove compliance without revealing sensitive data. Open source blockchain platform.",
   keywords: ["attestations", "blockchain", "compliance", "supply chain", "traceability", "zero-knowledge proofs", "verifiable credentials"],
   authors: [{ name: "ProofPass" }],
   openGraph: {

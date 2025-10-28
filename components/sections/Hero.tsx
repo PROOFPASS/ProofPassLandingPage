@@ -53,7 +53,7 @@ export function Hero() {
               className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               Create cryptographically-signed proofs for any business event. Prove
-              compliance without revealing sensitive data. <strong className="text-foreground">Open source</strong> platform built on Stellar and Optimism.
+              compliance without revealing sensitive data. <strong className="text-foreground">Open source</strong> blockchain platform.
             </motion.p>
 
             <motion.div
