@@ -30,7 +30,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
             >
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              Trusted by regulated industries
+              Open Source & Trusted by regulated industries
             </motion.div>
 
             <motion.h1
@@ -53,7 +53,7 @@ export function Hero() {
               className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               Create cryptographically-signed proofs for any business event. Prove
-              compliance without revealing sensitive data. Built on Stellar and Optimism.
+              compliance without revealing sensitive data. <strong className="text-foreground">Open source</strong> platform built on Stellar and Optimism.
             </motion.p>
 
             <motion.div

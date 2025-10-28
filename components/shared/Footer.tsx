@@ -87,7 +87,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 ProofPass. All rights reserved. Built for regulated industries.
+            © 2025 ProofPass. Open source and built for regulated industries.
           </p>
           <div className="flex items-center space-x-6">
             <a
@@ -107,10 +107,11 @@ export function Footer() {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/PROOFPASS/ProofPassPlatform"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              title="View ProofPass on GitHub"
             >
               <Github className="h-5 w-5" />
             </a>

@@ -50,8 +50,9 @@ export function TrustSignals() {
     },
     {
       name: "Open Source",
-      description: "Transparent, auditable code",
+      description: "Fully open source on GitHub",
       logo: "📖",
+      link: "https://github.com/PROOFPASS/ProofPassPlatform",
     },
     {
       name: "SOC 2 Compliant",
@@ -110,22 +111,34 @@ export function TrustSignals() {
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
         >
-          {technologies.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.2 + index * 0.05 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
-            >
-              <div className="text-4xl mb-3">{tech.logo}</div>
-              <div className="font-semibold text-sm text-foreground mb-1">
-                {tech.name}
-              </div>
-              <div className="text-xs text-muted-foreground">{tech.description}</div>
-            </motion.div>
-          ))}
+          {technologies.map((tech, index) => {
+            const Component = tech.link ? 'a' : 'div'
+            return (
+              <motion.div
+                key={tech.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: 0.2 + index * 0.05 }}
+                viewport={{ once: true }}
+              >
+                <Component
+                  {...(tech.link ? { href: tech.link, target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="block bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all border border-gray-200 hover:border-primary/50 cursor-pointer"
+                >
+                  <div className="text-4xl mb-3">{tech.logo}</div>
+                  <div className="font-semibold text-sm text-foreground mb-1">
+                    {tech.name}
+                  </div>
+                  <div className="text-xs text-muted-foreground">{tech.description}</div>
+                  {tech.link && (
+                    <div className="mt-2 text-xs text-primary font-medium">
+                      View on GitHub →
+                    </div>
+                  )}
+                </Component>
+              </motion.div>
+            )
+          })}
         </motion.div>
 
         {/* Technical Stats */}

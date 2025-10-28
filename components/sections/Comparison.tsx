@@ -27,6 +27,13 @@ export function Comparison() {
       custom: "Manual",
     },
     {
+      feature: "Open Source",
+      proofpass: true,
+      ibm: false,
+      sap: false,
+      custom: "Variable",
+    },
+    {
       feature: "Open Standards (W3C)",
       proofpass: true,
       ibm: false,
@@ -43,6 +50,11 @@ export function Comparison() {
   ]
 
   const differentiators = [
+    {
+      emoji: "📖",
+      title: "100% Open Source",
+      description: "Transparent, auditable code on GitHub",
+    },
     {
       emoji: "🚀",
       title: "1000x cheaper",
@@ -207,7 +219,7 @@ export function Comparison() {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl font-bold text-center mb-8">Key Differentiators</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {differentiators.map((item, index) => (
               <motion.div
                 key={item.title}
