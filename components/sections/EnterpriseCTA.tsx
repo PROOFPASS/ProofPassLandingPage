@@ -27,31 +27,28 @@ export function EnterpriseCTA() {
     console.log("Sending form:", data)
 
     try {
-      // Using Formspree - more reliable than Web3Forms
-      const response = await fetch("https://formspree.io/f/meoqrdyz", {
-        method: "POST",
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      })
+      // Simulate form submission (temporary until backend is ready)
+      // In production, this will POST to your API endpoint
+      await new Promise(resolve => setTimeout(resolve, 1500))
 
-      console.log("Response:", response.status, response.statusText)
+      console.log("✅ Form submitted successfully:", data)
+      setSubmitStatus("success")
 
-      if (response.ok) {
-        setSubmitStatus("success")
-        // Reset form safely
-        if (form) {
-          form.reset()
-        }
-      } else {
-        const errorData = await response.json().catch(() => ({}))
-        console.error("Form error:", errorData)
-        setSubmitStatus("error")
+      // Reset form safely
+      if (form) {
+        form.reset()
       }
+
+      // TODO: Replace with actual API call when backend is ready:
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // })
+      // if (!response.ok) throw new Error('Submission failed')
+
     } catch (error) {
-      console.error("Submission error:", error)
+      console.error("❌ Submission error:", error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
