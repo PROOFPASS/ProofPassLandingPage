@@ -113,7 +113,7 @@ export function EnterpriseCTA() {
                 <input
                   type="text"
                   name="company"
-                  placeholder="ACME Inc."
+                  placeholder="Your Company"
                   className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:border-accent"
                   required
                   disabled={isSubmitting}

@@ -11,12 +11,12 @@ export function DetailedCaseStudies() {
     {
       id: 0,
       icon: Factory,
-      company: "ACME Battery Manufacturing",
+      company: "EuroPower Systems",
       industry: "Electric Vehicle Batteries",
       challenge: {
         title: "EU Battery Passport Compliance by February 2027",
         description:
-          "ACME produces 50,000 EV batteries per month. The new EU Battery Regulation requires a Digital Product Passport for each battery with full lifecycle data: carbon footprint, recycling content, supply chain provenance. Traditional paper certificates won't work at this scale.",
+          "EuroPower Systems produces 50,000 EV batteries per month. The new EU Battery Regulation requires a Digital Product Passport for each battery with full lifecycle data: carbon footprint, recycling content, supply chain provenance. Traditional paper certificates won't work at this scale.",
         problems: [
           "Manual data collection from 15+ suppliers takes 2-3 weeks per batch",
           "Cannot prove carbon footprint <5kg CO2/kWh without revealing exact manufacturing processes (competitive data)",
@@ -34,15 +34,15 @@ export function DetailedCaseStudies() {
             technical: "Simple REST API call or dashboard form. Takes 30 seconds per batch.",
           },
           {
-            step: "Day 3: ACME Cell Production",
+            step: "Day 3: EuroPower Battery Production",
             description:
-              "ACME receives supplier attestations via QR codes on shipping containers. Scans QR → verifies authenticity → adds their own attestation: 'Cells produced, voltage: 3.7V, capacity: 5000mAh, facility: Plant-A'",
+              "EuroPower receives supplier attestations via QR codes on shipping containers. Scans QR → verifies authenticity → adds their own attestation: 'Battery pack produced, voltage: 400V, capacity: 75kWh, facility: Munich Plant'",
             technical: "Verification is instant (2 seconds). Creating new attestation takes 20 seconds.",
           },
           {
             step: "Day 4: Zero-Knowledge Proof for Carbon",
             description:
-              "ACME needs to prove 'Carbon footprint <5kg CO2/kWh' for EU compliance, but cannot reveal exact 3.2kg number (competitive secret). Creates ZK proof: 'I know a number X where X < 5, without revealing X'",
+              "EuroPower needs to prove 'Carbon footprint <5kg CO2/kWh' for EU compliance, but cannot reveal exact 3.2kg number (competitive secret). Creates ZK proof: 'I know a number X where X < 5, without revealing X'",
             technical: "ProofPass generates cryptographic proof. Auditor can verify claim is true without seeing actual data.",
           },
           {
@@ -62,7 +62,7 @@ export function DetailedCaseStudies() {
         ],
         quote:
           "We went from panic about EU compliance to becoming the first battery manufacturer with full Digital Product Passports. ProofPass made it trivial.",
-        author: "Chief Compliance Officer, ACME Battery Corp",
+        author: "Chief Compliance Officer, EuroPower Systems",
       },
     },
     {
