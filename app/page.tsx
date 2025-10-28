@@ -1,44 +1,40 @@
-import { Header } from "@/components/shared/Header"
-import { Footer } from "@/components/shared/Footer"
+import { HeaderEnterprise } from "@/components/shared/HeaderEnterprise"
+import { FooterEnterprise } from "@/components/shared/FooterEnterprise"
 
-// NEW SECTIONS - Complete Redesign
-import { HeroNew } from "@/components/sections/HeroNew"
-import { WhatIsProofPass } from "@/components/sections/WhatIsProofPass"
-import { ConcreteUseCases } from "@/components/sections/ConcreteUseCases"
-import { ThreeServices } from "@/components/sections/ThreeServices"
-import { TrustNetwork } from "@/components/sections/TrustNetwork"
-import { Integration } from "@/components/sections/Integration"
-import { VsAlternatives } from "@/components/sections/VsAlternatives"
-import { PricingNew } from "@/components/sections/PricingNew"
-import { ResourcesNew } from "@/components/sections/Resources"
-import { CompleteFAQ } from "@/components/sections/CompleteFAQ"
-import { FinalCTANew } from "@/components/sections/FinalCTANew"
-
-// Keeping these temporarily
-import { TrustSignals } from "@/components/sections/TrustSignals"
-import { SocialProof } from "@/components/sections/SocialProof"
+// ENTERPRISE B2B REDESIGN
+import { HeroEnterprise } from "@/components/sections/HeroEnterprise"
+import { PublicGoodBanner } from "@/components/sections/PublicGoodBanner"
+import { SocialProofEnterprise } from "@/components/sections/SocialProofEnterprise"
+import { ProblemStatement } from "@/components/sections/ProblemStatement"
+import { SolutionTiers } from "@/components/sections/SolutionTiers"
+import { HowItWorksEnterprise } from "@/components/sections/HowItWorksEnterprise"
+import { IndustryUseCases } from "@/components/sections/IndustryUseCases"
+import { ComparisonTableEnterprise } from "@/components/sections/ComparisonTableEnterprise"
+import { PricingEnterprise } from "@/components/sections/PricingEnterprise"
+import { SecurityCompliance } from "@/components/sections/SecurityCompliance"
+import { IntegrationDeveloper } from "@/components/sections/IntegrationDeveloper"
+import { EnterpriseCTA } from "@/components/sections/EnterpriseCTA"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
-      <Header />
+      <HeaderEnterprise />
 
-      {/* COMPLETE REDESIGN - Shopify Style in Spanish */}
-      <HeroNew />
-      <WhatIsProofPass />
-      <ConcreteUseCases />
-      <ThreeServices />
-      <TrustNetwork />
-      <Integration />
-      <VsAlternatives />
-      <PricingNew />
-      <ResourcesNew />
-      <TrustSignals />
-      <SocialProof />
-      <CompleteFAQ />
-      <FinalCTANew />
+      {/* ENTERPRISE B2B REDESIGN */}
+      <HeroEnterprise />
+      <PublicGoodBanner />
+      <SocialProofEnterprise />
+      <ProblemStatement />
+      <SolutionTiers />
+      <HowItWorksEnterprise />
+      <IndustryUseCases />
+      <ComparisonTableEnterprise />
+      <PricingEnterprise />
+      <SecurityCompliance />
+      <IntegrationDeveloper />
+      <EnterpriseCTA />
 
-      <Footer />
+      <FooterEnterprise />
 
       {/* JSON-LD Structured Data */}
       <script
@@ -51,13 +47,13 @@ export default function Home() {
             "applicationCategory": "BusinessApplication",
             "offers": {
               "@type": "AggregateOffer",
-              "lowPrice": "0",
-              "highPrice": "199",
+              "lowPrice": "199",
+              "highPrice": "50000",
               "priceCurrency": "EUR"
             },
-            "description": "Como DocuSign para tu Supply Chain. Crea pruebas digitales verificables de cualquier evento de negocio. Sin blockchain expertise. Open source.",
+            "description": "Enterprise-grade platform for creating cryptographically-signed proofs of business events. Enable instant verification across your supply chain. Built for regulated industries. SOC 2 Type II certified.",
             "operatingSystem": "Web",
-            "keywords": "attestations, blockchain, compliance, supply chain, traceability, zero-knowledge proofs"
+            "keywords": "attestations, blockchain, compliance, supply chain, traceability, zero-knowledge proofs, enterprise, B2B, W3C credentials, digital public good"
           })
         }}
       />

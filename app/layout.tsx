@@ -8,22 +8,22 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "ProofPass - Como DocuSign para tu Supply Chain",
-  description: "Crea pruebas digitales verificables de cualquier evento de negocio. Sin blockchain expertise. Sin vendor lock-in. Open source.",
-  keywords: ["attestations", "blockchain", "compliance", "supply chain", "trazabilidad", "zero-knowledge proofs", "verificación digital"],
+  title: "ProofPass - Digital Attestations for Supply Chain Compliance",
+  description: "Enterprise-grade platform for creating cryptographically-signed proofs of business events. Enable instant verification across your supply chain. Built for regulated industries.",
+  keywords: ["attestations", "blockchain", "compliance", "supply chain", "traceability", "zero-knowledge proofs", "enterprise", "B2B", "verification", "W3C credentials"],
   authors: [{ name: "ProofPass" }],
   openGraph: {
     type: "website",
-    locale: "es_ES",
+    locale: "en_US",
     url: "https://proofpass.com",
-    title: "ProofPass - Como DocuSign para tu Supply Chain",
-    description: "Crea pruebas digitales verificables de cualquier evento de negocio. Tus clientes y partners pueden verificar al instante.",
+    title: "ProofPass - Digital Attestations for Supply Chain Compliance",
+    description: "Create cryptographically-signed proofs for any business event. Enable instant verification across your supply chain. Built for regulated industries.",
     siteName: "ProofPass",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ProofPass - Como DocuSign para tu Supply Chain",
-    description: "Crea pruebas digitales verificables. Sin blockchain expertise. Open source.",
+    title: "ProofPass - Digital Attestations for Supply Chain Compliance",
+    description: "Enterprise-grade attestation platform. SOC 2 Type II certified. 99.9% SLA. Deploy in 2 weeks.",
   },
   robots: {
     index: true,
