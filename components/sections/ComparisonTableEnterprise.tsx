@@ -14,7 +14,7 @@ export function ComparisonTableEnterprise() {
     },
     {
       feature: "Setup time",
-      proofpass: "2 weeks",
+      proofpass: "5 days",
       ibm: "3-6 months",
       sap: "6-12 months",
       custom: "18+ months",
@@ -195,7 +195,7 @@ export function ComparisonTableEnterprise() {
             {
               number: "4",
               title: "Rapid Deployment",
-              description: "Production-ready in 2 weeks, not 6+ months",
+              description: "Production-ready in 5 days, not 6+ months",
             },
           ].map((item, index) => (
             <div key={index} className="text-center">

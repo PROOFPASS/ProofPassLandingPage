@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ProofPass - Digital Attestations for Supply Chain Compliance",
-    description: "Enterprise-grade attestation platform. ISO 27001 certified. Open source. 99.9% SLA. Deploy in 2 weeks.",
+    description: "Enterprise-grade attestation platform. ISO 27001 certified. Open source. 99.9% SLA. Deploy in 5 days.",
   },
   robots: {
     index: true,

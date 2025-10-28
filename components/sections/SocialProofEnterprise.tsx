@@ -15,7 +15,7 @@ export function SocialProofEnterprise() {
       label: "Uptime SLA",
     },
     {
-      value: "2 weeks",
+      value: "5 days",
       label: "Average Deployment",
     },
   ]

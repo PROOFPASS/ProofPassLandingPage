@@ -38,7 +38,7 @@ export function HeroEnterprise() {
               <div>
                 <div className="flex items-center gap-2 text-foreground font-semibold mb-1">
                   <CheckCircle2 className="h-5 w-5 text-secondary" />
-                  Deploy in 2 weeks
+                  Deploy in 5 days
                 </div>
                 <p className="text-sm text-muted-foreground">Not 6 months</p>
               </div>
