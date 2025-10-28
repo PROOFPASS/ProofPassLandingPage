@@ -151,9 +151,11 @@ export function SolutionTiers() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <Button size="lg" variant="outline" className="border-2">
-            View Detailed Comparison
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button size="lg" variant="outline" className="border-2" asChild>
+            <a href="#pricing">
+              View Detailed Comparison
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </div>
       </div>

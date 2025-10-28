@@ -1,5 +1,5 @@
-import { Header } from "@/components/shared/Header"
-import { Footer } from "@/components/shared/Footer"
+import { HeaderEnterprise } from "@/components/shared/HeaderEnterprise"
+import { FooterEnterprise } from "@/components/shared/FooterEnterprise"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, BookOpen, Code, FileText, Zap } from "lucide-react"
 import Link from "next/link"
@@ -40,12 +40,12 @@ export default function DocsPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <Header />
+      <HeaderEnterprise />
 
       <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Back button */}
-          <Link href="/" className="inline-flex items-center gap-2 text-primary hover:underline mb-8">
+          <Link href="/" className="inline-flex items-center gap-2 text-accent hover:text-accent-600 font-medium transition-colors mb-8">
             <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Link>
@@ -62,8 +62,8 @@ export default function DocsPage() {
           </div>
 
           {/* Coming Soon Notice */}
-          <div className="bg-primary/10 border-2 border-primary rounded-2xl p-8 mb-16 text-center">
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-accent/10 border-2 border-accent rounded-2xl p-8 mb-16 text-center">
+            <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
               <BookOpen className="h-8 w-8 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-foreground mb-2">
@@ -73,8 +73,8 @@ export default function DocsPage() {
               We&apos;re working hard on comprehensive documentation. In the meantime,
               check out the sections below or contact our team for early access.
             </p>
-            <Button size="lg">
-              Request Early Access
+            <Button size="lg" className="bg-accent hover:bg-accent-600 text-white" asChild>
+              <a href="/#contact">Request Early Access</a>
             </Button>
           </div>
 
@@ -83,11 +83,11 @@ export default function DocsPage() {
             {docSections.map((section) => {
               const Icon = section.icon
               return (
-                <Card key={section.title} className="hover:shadow-lg transition-shadow">
+                <Card key={section.title} className="hover:shadow-lg transition-shadow border-2 border-border">
                   <CardHeader>
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-primary" />
+                      <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                        <Icon className="h-6 w-6 text-accent" />
                       </div>
                       <CardTitle>{section.title}</CardTitle>
                     </div>
@@ -99,7 +99,7 @@ export default function DocsPage() {
                     <ul className="space-y-2">
                       {section.items.map((item) => (
                         <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                           {item}
                         </li>
                       ))}
@@ -111,24 +111,24 @@ export default function DocsPage() {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+          <div className="mt-16 bg-gradient-to-r from-accent to-accent-600 rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-2">Need Help Getting Started?</h3>
             <p className="mb-6 text-white/90">
               Our team is here to help you integrate ProofPass into your workflow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" size="lg" className="bg-white text-primary hover:bg-white/90">
-                Contact Support
+              <Button variant="outline" size="lg" className="bg-white text-accent hover:bg-white/90" asChild>
+                <a href="/#contact">Contact Support</a>
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                Schedule Demo
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10" asChild>
+                <a href="/#contact">Schedule Demo</a>
               </Button>
             </div>
           </div>
         </div>
       </div>
 
-      <Footer />
+      <FooterEnterprise />
     </main>
   )
 }
