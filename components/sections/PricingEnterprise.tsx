@@ -166,10 +166,11 @@ export function PricingEnterprise() {
 
               {/* CTA */}
               <Button
+                variant="ghost"
                 className={`w-full ${
                   plan.popular
-                    ? "bg-accent hover:bg-accent-600 text-white"
-                    : "bg-white border-2 border-border hover:bg-muted"
+                    ? "!bg-accent hover:!bg-accent/90 !text-white"
+                    : "!bg-white border-2 border-accent !text-accent hover:!bg-accent hover:!text-white"
                 }`}
                 size="lg"
                 asChild

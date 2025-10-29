@@ -221,11 +221,11 @@ export function EnterpriseCTA() {
           <p className="text-white mb-4 font-semibold">Prefer to talk now?</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="tel:+15551234567"
+              href="tel:+5493534189492"
               className="flex items-center gap-2 text-white hover:text-white/80 transition-colors"
             >
               <Phone className="h-5 w-5" />
-              <span>+1 (555) 123-4567</span>
+              <span>+54 9 3534 189492</span>
             </a>
             <span className="text-white/60 hidden sm:inline">|</span>
             <a
