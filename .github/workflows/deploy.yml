@@ -1,0 +1,221 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '18'
+  AWS_REGION: 'us-east-1'
+
+jobs:
+  # Run tests and linting first
+  test:
+    name: Test & Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Build project
+        run: npm run build
+
+  # Deploy to AWS Amplify (Option 1 - Recommended)
+  deploy-amplify:
+    name: Deploy to AWS Amplify
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Deploy to Amplify
+        run: |
+          # Get Amplify App ID
+          APP_ID=${{ secrets.AMPLIFY_APP_ID }}
+
+          # Trigger new deployment
+          aws amplify start-job \
+            --app-id $APP_ID \
+            --branch-name main \
+            --job-type RELEASE
+
+      - name: Notify deployment success
+        if: success()
+        uses: slackapi/slack-github-action@v1
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          payload: |
+            {
+              "text": "✅ ProofPass Landing Page deployed successfully to AWS Amplify",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "✅ *Deployment Successful*\n*Project:* ProofPass Landing Page\n*Branch:* main\n*Environment:* Production\n*Platform:* AWS Amplify"
+                  }
+                }
+              ]
+            }
+
+      - name: Notify deployment failure
+        if: failure()
+        uses: slackapi/slack-github-action@v1
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          payload: |
+            {
+              "text": "❌ ProofPass Landing Page deployment failed",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "❌ *Deployment Failed*\n*Project:* ProofPass Landing Page\n*Branch:* main\n*Platform:* AWS Amplify\n*Check logs:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  }
+                }
+              ]
+            }
+
+  # Alternative: Deploy to AWS ECS (Option 2)
+  # Uncomment this job if using ECS instead of Amplify
+  # deploy-ecs:
+  #   name: Deploy to AWS ECS
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/main'
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Configure AWS credentials
+  #       uses: aws-actions/configure-aws-credentials@v4
+  #       with:
+  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         aws-region: ${{ env.AWS_REGION }}
+  #
+  #     - name: Login to Amazon ECR
+  #       id: login-ecr
+  #       uses: aws-actions/amazon-ecr-login@v2
+  #
+  #     - name: Build, tag, and push image to Amazon ECR
+  #       id: build-image
+  #       env:
+  #         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+  #         ECR_REPOSITORY: proofpass-landing
+  #         IMAGE_TAG: ${{ github.sha }}
+  #       run: |
+  #         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+  #         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+  #         echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+  #
+  #     - name: Fill in the new image ID in the Amazon ECS task definition
+  #       id: task-def
+  #       uses: aws-actions/amazon-ecs-render-task-definition@v1
+  #       with:
+  #         task-definition: task-definition.json
+  #         container-name: proofpass-landing
+  #         image: ${{ steps.build-image.outputs.image }}
+  #
+  #     - name: Deploy Amazon ECS task definition
+  #       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+  #       with:
+  #         task-definition: ${{ steps.task-def.outputs.task-definition }}
+  #         service: proofpass-landing-service
+  #         cluster: proofpass-cluster
+  #         wait-for-service-stability: true
+  #
+  #     - name: Notify deployment success
+  #       if: success()
+  #       uses: slackapi/slack-github-action@v1
+  #       with:
+  #         webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+  #         payload: |
+  #           {
+  #             "text": "✅ ProofPass Landing Page deployed successfully to AWS ECS",
+  #             "blocks": [
+  #               {
+  #                 "type": "section",
+  #                 "text": {
+  #                   "type": "mrkdwn",
+  #                   "text": "✅ *Deployment Successful*\n*Project:* ProofPass Landing Page\n*Branch:* main\n*Environment:* Production\n*Platform:* AWS ECS\n*Image:* ${{ steps.build-image.outputs.image }}"
+  #                 }
+  #               }
+  #             ]
+  #           }
+
+  # Alternative: Deploy to AWS EC2 (Option 3)
+  # Uncomment this job if using EC2 instead of Amplify
+  # deploy-ec2:
+  #   name: Deploy to AWS EC2
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/main'
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Configure AWS credentials
+  #       uses: aws-actions/configure-aws-credentials@v4
+  #       with:
+  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         aws-region: ${{ env.AWS_REGION }}
+  #
+  #     - name: Deploy to EC2
+  #       env:
+  #         PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+  #         HOST: ${{ secrets.EC2_HOST }}
+  #         USER: ubuntu
+  #       run: |
+  #         echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+  #         ssh -o StrictHostKeyChecking=no -i private_key ${USER}@${HOST} << 'EOF'
+  #           cd /var/www/proofpass-landing
+  #           git pull origin main
+  #           npm ci
+  #           npm run build
+  #           pm2 restart proofpass-landing
+  #         EOF
+  #
+  #     - name: Notify deployment success
+  #       if: success()
+  #       uses: slackapi/slack-github-action@v1
+  #       with:
+  #         webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+  #         payload: |
+  #           {
+  #             "text": "✅ ProofPass Landing Page deployed successfully to AWS EC2",
+  #             "blocks": [
+  #               {
+  #                 "type": "section",
+  #                 "text": {
+  #                   "type": "mrkdwn",
+  #                   "text": "✅ *Deployment Successful*\n*Project:* ProofPass Landing Page\n*Branch:* main\n*Environment:* Production\n*Platform:* AWS EC2\n*Server:* ${{ secrets.EC2_HOST }}"
+  #                 }
+  #               }
+  #             ]
+  #           }
