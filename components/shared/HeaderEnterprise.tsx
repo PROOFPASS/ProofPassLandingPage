@@ -44,9 +44,6 @@ export function HeaderEnterprise() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <a href="#contact">Sign In</a>
-            </Button>
             <Button size="sm" className="bg-accent hover:bg-accent-600 text-white" asChild>
               <a href="#contact">
                 Request Demo
@@ -82,10 +79,7 @@ export function HeaderEnterprise() {
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="w-full justify-start" asChild>
-                  <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Sign In</a>
-                </Button>
+              <div className="pt-4 border-t border-border">
                 <Button size="sm" className="w-full bg-accent hover:bg-accent-600 text-white" asChild>
                   <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
                     Request Demo

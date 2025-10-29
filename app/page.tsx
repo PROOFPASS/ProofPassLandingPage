@@ -7,7 +7,7 @@ import { PublicGoodBanner } from "@/components/sections/PublicGoodBanner"
 import { SocialProofEnterprise } from "@/components/sections/SocialProofEnterprise"
 import { ProblemStatement } from "@/components/sections/ProblemStatement"
 import { SolutionTiers } from "@/components/sections/SolutionTiers"
-import { HowItWorksEnterprise } from "@/components/sections/HowItWorksEnterprise"
+import { HowItWorks } from "@/components/sections/HowItWorks"
 import { DetailedCaseStudies } from "@/components/sections/DetailedCaseStudies"
 import { ComparisonTableEnterprise } from "@/components/sections/ComparisonTableEnterprise"
 import { PricingEnterprise } from "@/components/sections/PricingEnterprise"
@@ -22,11 +22,11 @@ export default function Home() {
 
       {/* ENTERPRISE B2B REDESIGN */}
       <HeroEnterprise />
+      <HowItWorks />
       <PublicGoodBanner />
       <SocialProofEnterprise />
       <ProblemStatement />
       <SolutionTiers />
-      <HowItWorksEnterprise />
       <DetailedCaseStudies />
       <ComparisonTableEnterprise />
       <PricingEnterprise />

@@ -27,25 +27,26 @@ export function EnterpriseCTA() {
     console.log("Sending form:", data)
 
     try {
-      // Simulate form submission (temporary until backend is ready)
-      // In production, this will POST to your API endpoint
-      await new Promise(resolve => setTimeout(resolve, 1500))
+      // Submit to API endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
 
-      console.log("✅ Form submitted successfully:", data)
-      setSubmitStatus("success")
+      const result = await response.json()
 
-      // Reset form safely
-      if (form) {
-        form.reset()
+      if (response.ok && result.success) {
+        console.log("✅ Form submitted successfully:", result.id)
+        setSubmitStatus("success")
+
+        // Reset form safely
+        if (form) {
+          form.reset()
+        }
+      } else {
+        throw new Error(result.message || 'Submission failed')
       }
-
-      // TODO: Replace with actual API call when backend is ready:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data)
-      // })
-      // if (!response.ok) throw new Error('Submission failed')
 
     } catch (error) {
       console.error("❌ Submission error:", error)
