@@ -29,7 +29,7 @@ export function PricingEnterprise() {
       cta: "View on GitHub",
       ctaLink: "https://github.com/PROOFPASS/ProofPassPlatform",
       popular: false,
-      highlight: "Commons Infrastructure",
+      highlight: "Open Commons",
     },
     {
       name: "Professional",
