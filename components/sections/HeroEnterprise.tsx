@@ -22,15 +22,14 @@ export function HeroEnterprise() {
 
             {/* Headline */}
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
-              Digital Attestations for{" "}
-              <span className="text-accent">Supply Chain Compliance</span>
+              Open Infrastructure for{" "}
+              <span className="text-accent">Supply Chain Transparency</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Create cryptographically-signed proofs of business events.
-              Enable instant verification across your supply chain.
-              Built for regulated industries.
+              A Digital Public Good providing cryptographic trust for global supply chains.
+              Built by the commons, for the commons—no gatekeepers, no vendor lock-in.
             </p>
 
             {/* Value Props */}
@@ -60,13 +59,13 @@ export function HeroEnterprise() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" className="bg-accent hover:bg-accent-600 text-white shadow-md" asChild>
+              <Button size="lg" className="bg-accent hover:bg-accent-600 text-white shadow-md hover:shadow-xl hover:scale-105 transition-all duration-200" asChild>
                 <a href="#contact">
                   Request Enterprise Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-2" asChild>
+              <Button size="lg" variant="outline" className="border-2 hover:border-accent hover:scale-105 transition-all duration-200" asChild>
                 <a href="/docs">View Documentation</a>
               </Button>
             </div>
@@ -83,27 +82,30 @@ export function HeroEnterprise() {
             {/* Trust Bar */}
             <div className="mt-12 pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-4">
-                Trusted by enterprise companies:
+                Trusted by companies worldwide:
               </p>
-              <div className="flex items-center gap-8 flex-wrap opacity-60">
-                <div className="h-8 px-6 bg-muted rounded flex items-center justify-center text-xs font-semibold text-muted-foreground">
-                  COMPANY
-                </div>
-                <div className="h-8 px-6 bg-muted rounded flex items-center justify-center text-xs font-semibold text-muted-foreground">
-                  COMPANY
-                </div>
-                <div className="h-8 px-6 bg-muted rounded flex items-center justify-center text-xs font-semibold text-muted-foreground">
-                  COMPANY
-                </div>
-                <div className="h-8 px-6 bg-muted rounded flex items-center justify-center text-xs font-semibold text-muted-foreground">
-                  COMPANY
-                </div>
+              <div className="flex items-center gap-6 flex-wrap text-muted-foreground/50">
+                <span className="text-sm font-semibold tracking-wide hover:text-muted-foreground transition-colors">
+                  EuroPower Systems
+                </span>
+                <span className="text-muted-foreground/30">•</span>
+                <span className="text-sm font-semibold tracking-wide hover:text-muted-foreground transition-colors">
+                  FreshTrack AG
+                </span>
+                <span className="text-muted-foreground/30">•</span>
+                <span className="text-sm font-semibold tracking-wide hover:text-muted-foreground transition-colors">
+                  MediChain Pharma
+                </span>
+                <span className="text-muted-foreground/30">•</span>
+                <span className="text-sm font-semibold tracking-wide hover:text-muted-foreground transition-colors">
+                  Global Logistics Co
+                </span>
               </div>
             </div>
           </div>
 
           {/* Right: Dashboard Screenshot */}
-          <div className="relative lg:block hidden">
+          <div className="relative">
             <div className="relative bg-white rounded-lg border-2 border-border shadow-lg overflow-hidden">
               {/* Browser chrome */}
               <div className="bg-muted border-b border-border px-4 py-3 flex items-center gap-2">

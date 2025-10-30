@@ -16,28 +16,21 @@ export function EnterpriseCTA() {
     const form = e.currentTarget
     const formData = new FormData(form)
 
-    // Convert to JSON
-    const data: Record<string, string> = {}
-    formData.forEach((value, key) => {
-      if (key !== '_gotcha') {
-        data[key] = value.toString()
-      }
-    })
-
-    console.log("Sending form:", data)
-
     try {
-      // Submit to API endpoint
-      const response = await fetch('/api/contact', {
+      console.log("📤 Submitting form to Web3Forms...")
+      console.log("FormData entries:", Array.from(formData.entries()))
+
+      // Submit to Web3Forms
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: formData
       })
 
       const result = await response.json()
+      console.log("📥 Response from Web3Forms:", result)
 
       if (response.ok && result.success) {
-        console.log("✅ Form submitted successfully:", result.id)
+        console.log("✅ Form submitted successfully via Web3Forms")
         setSubmitStatus("success")
 
         // Reset form safely
@@ -45,6 +38,7 @@ export function EnterpriseCTA() {
           form.reset()
         }
       } else {
+        console.error("❌ Web3Forms returned error:", result)
         throw new Error(result.message || 'Submission failed')
       }
 
@@ -71,6 +65,8 @@ export function EnterpriseCTA() {
         {/* Form */}
         <div className="bg-white rounded-lg p-8 lg:p-12 shadow-xl mb-8">
           <form onSubmit={handleSubmit} className="space-y-4 mb-6">
+            {/* Web3Forms access key */}
+            <input type="hidden" name="access_key" value="1e9abda6-d76e-408a-94b8-44b165827800" />
             {/* Anti-spam honeypot */}
             <input type="text" name="_gotcha" style={{display: "none"}} tabIndex={-1} />
 

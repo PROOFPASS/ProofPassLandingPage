@@ -4,6 +4,7 @@ import { FooterEnterprise } from "@/components/shared/FooterEnterprise"
 // ENTERPRISE B2B REDESIGN
 import { HeroEnterprise } from "@/components/sections/HeroEnterprise"
 import { PublicGoodBanner } from "@/components/sections/PublicGoodBanner"
+import { CommonsImpact } from "@/components/sections/CommonsImpact"
 import { SocialProofEnterprise } from "@/components/sections/SocialProofEnterprise"
 import { ProblemStatement } from "@/components/sections/ProblemStatement"
 import { SolutionTiers } from "@/components/sections/SolutionTiers"
@@ -24,6 +25,7 @@ export default function Home() {
       <HeroEnterprise />
       <HowItWorks />
       <PublicGoodBanner />
+      <CommonsImpact />
       <SocialProofEnterprise />
       <ProblemStatement />
       <SolutionTiers />
@@ -51,7 +53,7 @@ export default function Home() {
               "highPrice": "50000",
               "priceCurrency": "EUR"
             },
-            "description": "Enterprise-grade platform for creating cryptographically-signed proofs of business events. Enable instant verification across your supply chain. Built for regulated industries. ISO 27001 certified. Open source.",
+            "description": "Open infrastructure for supply chain transparency. A Digital Public Good providing cryptographic trust for global supply chains. Built by the commons, for the commons—no gatekeepers, no vendor lock-in. ISO 27001 certified.",
             "operatingSystem": "Web",
             "keywords": "attestations, blockchain, compliance, supply chain, traceability, zero-knowledge proofs, enterprise, B2B, W3C credentials, digital public good"
           })

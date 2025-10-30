@@ -29,16 +29,18 @@ export function PublicGoodBanner() {
             </div>
 
             <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
-              Nominated as a Digital Public Good
+              Infrastructure as a Commons
             </h3>
 
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-              ProofPass is open source and has been{" "}
+              ProofPass is a{" "}
               <span className="font-semibold text-foreground">
-                nominated for recognition by the Digital Public Goods Alliance (DPGA)
+                Digital Public Good nominated by the DPGA
               </span>
-              . This nomination validates our commitment to transparency, accessibility,
-              and global impact as we work towards full DPG certification.
+              , providing critical supply chain infrastructure accessible to all.
+              We believe transparency and trust should not be proprietary—they should be{" "}
+              <span className="font-semibold text-foreground">commons infrastructure</span>{" "}
+              that benefits everyone, from smallholder farmers to multinational corporations.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4 mb-4">
@@ -85,44 +87,47 @@ export function PublicGoodBanner() {
           </div>
         </div>
 
-        {/* Why It Matters */}
+        {/* Why Commons-Based Infrastructure Matters */}
         <div className="mt-8 pt-8 border-t border-border">
           <div className="text-center mb-4">
             <h4 className="text-lg font-bold text-foreground mb-2">
-              Why This Matters for Enterprises
+              Why Commons-Based Infrastructure Matters
             </h4>
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
+              When critical infrastructure is built as a commons, everyone benefits from shared innovation, reduced costs, and collective governance.
+            </p>
           </div>
           <div className="grid md:grid-cols-4 gap-6 text-sm">
             <div className="text-center">
               <div className="font-semibold text-foreground mb-1">
-                Future-Proof Investment
+                💰 Sustainable Funding
               </div>
               <div className="text-muted-foreground">
-                Open standards ensure long-term viability
+                Commons-based model reduces costs for all participants
               </div>
             </div>
             <div className="text-center">
               <div className="font-semibold text-foreground mb-1">
-                Regulatory Confidence
+                🌍 Global Accessibility
               </div>
               <div className="text-muted-foreground">
-                Auditable codebase and transparent operations
+                No gatekeepers—anyone can verify, audit, or contribute
               </div>
             </div>
             <div className="text-center">
               <div className="font-semibold text-foreground mb-1">
-                Community Support
+                🤝 Collective Governance
               </div>
               <div className="text-muted-foreground">
-                Global developer community backing
+                Community-driven development and decision-making
               </div>
             </div>
             <div className="text-center">
               <div className="font-semibold text-foreground mb-1">
-                Sustainability Alignment
+                🔓 Future-Proof
               </div>
               <div className="text-muted-foreground">
-                Contributes to UN Sustainable Development Goals
+                Open standards prevent vendor lock-in and obsolescence
               </div>
             </div>
           </div>
