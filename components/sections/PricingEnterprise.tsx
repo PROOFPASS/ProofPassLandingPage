@@ -83,11 +83,95 @@ export function PricingEnterprise() {
   return (
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white scroll-mt-16">
       <div className="max-w-7xl mx-auto">
+        {/* Open Source / Community Section - Top */}
+        <div className="bg-gradient-to-r from-secondary-50 to-accent-50 rounded-2xl border-2 border-secondary p-8 lg:p-12 mb-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-full text-sm font-semibold mb-4">
+                Open Commons
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Start with Community Edition (Free Forever)
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Deploy ProofPass on your own infrastructure. Full source code access, complete control,
+                and community support. Maintained by the commons, for the commons.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-white rounded-lg p-6 border border-border">
+                <h4 className="font-bold text-foreground mb-4">What You Get</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Full source code access (AGPLv3)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Deploy on your infrastructure</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">All core features included</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">No vendor lock-in</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 border border-border">
+                <h4 className="font-bold text-foreground mb-4">You Manage</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Your own infrastructure & hosting</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Updates & maintenance</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Security & compliance</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Community support (Discord)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Button
+                size="lg"
+                className="!bg-secondary hover:!bg-secondary/90 !text-white shadow-lg"
+                asChild
+              >
+                <a
+                  href="https://github.com/PROOFPASS/ProofPassPlatform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Transparent Enterprise Pricing
+            Managed Enterprise Plans
           </h2>
+          <p className="text-xl text-muted-foreground">
+            Or let us handle the infrastructure for you
+          </p>
         </div>
 
         {/* Pricing Cards */}
@@ -182,57 +266,6 @@ export function PricingEnterprise() {
               </Button>
             </div>
           ))}
-        </div>
-
-        {/* Open Source / Community Banner */}
-        <div className="bg-gradient-to-r from-secondary-50 to-accent-50 rounded-lg border-2 border-secondary p-8 mb-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Prefer Self-Hosted? We're Open Source
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Deploy ProofPass on your own infrastructure. Full source code access,
-                  complete control, and community support. Maintained by the commons, for the commons.
-                </p>
-                <div className="flex flex-wrap gap-3 justify-center md:justify-start text-sm text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <Check className="h-4 w-4 text-secondary" />
-                    AGPLv3 License
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Check className="h-4 w-4 text-secondary" />
-                    All Core Features
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Check className="h-4 w-4 text-secondary" />
-                    No Vendor Lock-in
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Check className="h-4 w-4 text-secondary" />
-                    Community Support
-                  </span>
-                </div>
-              </div>
-              <div className="flex-shrink-0">
-                <Button
-                  size="lg"
-                  className="!bg-secondary hover:!bg-secondary/90 !text-white shadow-lg"
-                  asChild
-                >
-                  <a
-                    href="https://github.com/PROOFPASS/ProofPassPlatform"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View on GitHub
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Volume Discounts */}
