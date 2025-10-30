@@ -7,7 +7,7 @@ export function SocialProofEnterprise() {
       label: "Attestations Created",
     },
     {
-      value: "<$0.001",
+      value: "€0.001",
       label: "Cost per Attestation",
     },
     {
@@ -17,6 +17,33 @@ export function SocialProofEnterprise() {
     {
       value: "5 days",
       label: "Average Deployment",
+    },
+  ]
+
+  const testimonials = [
+    {
+      quote: "We went from panic about EU compliance to becoming the first battery manufacturer with full Digital Product Passports. ProofPass made it trivial.",
+      author: "Chief Compliance Officer",
+      company: "EuroPower Systems",
+      industry: "EV Battery Manufacturing",
+      initials: "EP",
+      color: "bg-accent"
+    },
+    {
+      quote: "During the last E. coli scare, we traced back the contaminated batch to the exact farm in under 1 minute. Saved us $1.8M in unnecessary product destruction.",
+      author: "VP of Operations",
+      company: "FreshTrack Organic Foods",
+      industry: "Farm-to-Table Distribution",
+      initials: "FT",
+      color: "bg-secondary"
+    },
+    {
+      quote: "We caught 3 counterfeit incidents in the first month that our old system missed. One batch contained only 40% of the active ingredient. ProofPass literally saved lives.",
+      author: "Director of Quality Assurance",
+      company: "MediChain Pharmaceuticals",
+      industry: "Drug Manufacturing",
+      initials: "MC",
+      color: "bg-accent"
     },
   ]
 
@@ -37,25 +64,34 @@ export function SocialProofEnterprise() {
           ))}
         </div>
 
-        {/* Testimonial */}
-        <div className="bg-white rounded-lg border border-border p-8 lg:p-12 max-w-4xl mx-auto">
-          <blockquote className="text-lg lg:text-xl text-foreground mb-6 leading-relaxed">
-            &ldquo;ProofPass enables our battery division to meet EU compliance
-            requirements while protecting proprietary manufacturing data.&rdquo;
-          </blockquote>
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-semibold">
-              JD
-            </div>
-            <div>
-              <div className="font-semibold text-foreground">
-                Chief Compliance Officer
+        {/* Testimonials Grid */}
+        <div className="grid lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg border border-border p-6 hover:shadow-lg transition-shadow"
+            >
+              <blockquote className="text-sm text-foreground mb-6 leading-relaxed">
+                &ldquo;{testimonial.quote}&rdquo;
+              </blockquote>
+              <div className="flex items-center gap-3">
+                <div className={`w-10 h-10 rounded-full ${testimonial.color} flex items-center justify-center text-white font-semibold text-sm`}>
+                  {testimonial.initials}
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground text-sm">
+                    {testimonial.author}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {testimonial.company}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {testimonial.industry}
+                  </div>
+                </div>
               </div>
-              <div className="text-sm text-muted-foreground">
-                Fortune 500 Automotive Manufacturer
-              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

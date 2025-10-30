@@ -330,7 +330,7 @@ export function DetailedCaseStudies() {
           </p>
           <Button size="lg" className="bg-accent hover:bg-accent-600 text-white" asChild>
             <a href="#contact">
-              Schedule Technical Deep-Dive
+              Request Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>

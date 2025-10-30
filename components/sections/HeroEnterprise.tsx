@@ -61,7 +61,7 @@ export function HeroEnterprise() {
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" className="bg-accent hover:bg-accent-600 text-white shadow-md hover:shadow-xl hover:scale-105 transition-all duration-200" asChild>
                 <a href="#contact">
-                  Request Enterprise Demo
+                  Request Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

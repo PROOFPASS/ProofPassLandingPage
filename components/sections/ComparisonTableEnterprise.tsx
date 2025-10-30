@@ -7,72 +7,72 @@ export function ComparisonTableEnterprise() {
     {
       feature: "Cost per attestation",
       proofpass: "€0.001",
-      ibm: "€0.50+",
-      sap: "€0.20+",
+      blockchain: "€0.50+",
+      erp: "€0.20+",
       custom: "€50-100",
       proofpassBest: true,
     },
     {
       feature: "Setup time",
       proofpass: "5 days",
-      ibm: "3-6 months",
-      sap: "6-12 months",
+      blockchain: "3-6 months",
+      erp: "6-12 months",
       custom: "18+ months",
       proofpassBest: true,
     },
     {
       feature: "Zero-Knowledge Proofs",
       proofpass: true,
-      ibm: false,
-      sap: false,
+      blockchain: false,
+      erp: false,
       custom: "manual",
       proofpassBest: true,
     },
     {
       feature: "Open Standards (W3C)",
       proofpass: "Full",
-      ibm: "Partial",
-      sap: "Proprietary",
+      blockchain: "Partial",
+      erp: "Proprietary",
       custom: "Variable",
       proofpassBest: true,
     },
     {
       feature: "Multi-blockchain",
       proofpass: true,
-      ibm: "Limited",
-      sap: "Limited",
+      blockchain: "Limited",
+      erp: "Limited",
       custom: true,
       proofpassBest: false,
     },
     {
       feature: "SLA",
       proofpass: "99.9%",
-      ibm: "99.5%",
-      sap: "99.0%",
+      blockchain: "99.5%",
+      erp: "99.0%",
       custom: "N/A",
       proofpassBest: true,
     },
     {
       feature: "On-premise option",
       proofpass: "Enterprise",
-      ibm: false,
-      sap: "Expensive",
+      blockchain: false,
+      erp: "Expensive",
       custom: true,
       proofpassBest: false,
     },
     {
       feature: "API-first",
       proofpass: true,
-      ibm: "Limited",
-      sap: "Complex",
+      blockchain: "Limited",
+      erp: "Complex",
       custom: "Custom",
       proofpassBest: true,
     },
     {
       feature: "Total 3-year TCO*",
       proofpass: "€50K",
-      ibm: "€500K+",
-      sap: "€300K+",
+      blockchain: "€500K+",
+      erp: "€300K+",
       custom: "€2M+",
       proofpassBest: true,
     },
@@ -124,10 +124,10 @@ export function ComparisonTableEnterprise() {
                   ProofPass
                 </th>
                 <th className="px-6 py-4 text-center text-sm font-bold text-foreground">
-                  IBM Food Trust
+                  Blockchain Platforms
                 </th>
                 <th className="px-6 py-4 text-center text-sm font-bold text-foreground">
-                  SAP/Oracle
+                  Legacy ERP Systems
                 </th>
                 <th className="px-6 py-4 text-center text-sm font-bold text-foreground">
                   Custom Build
@@ -155,10 +155,10 @@ export function ComparisonTableEnterprise() {
                     {renderCell(row.proofpass)}
                   </td>
                   <td className="px-6 py-4 text-sm text-center text-muted-foreground">
-                    {renderCell(row.ibm)}
+                    {renderCell(row.blockchain)}
                   </td>
                   <td className="px-6 py-4 text-sm text-center text-muted-foreground">
-                    {renderCell(row.sap)}
+                    {renderCell(row.erp)}
                   </td>
                   <td className="px-6 py-4 text-sm text-center text-muted-foreground">
                     {renderCell(row.custom)}

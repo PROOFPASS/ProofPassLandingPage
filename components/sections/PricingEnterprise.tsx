@@ -26,7 +26,7 @@ export function PricingEnterprise() {
         "€0.02/attestation overage",
         "€0.10/ZK proof overage",
       ],
-      cta: "Start 30-Day Trial",
+      cta: "Request Demo",
       popular: false,
     },
     {
@@ -52,7 +52,7 @@ export function PricingEnterprise() {
         "Microsoft Dynamics",
         "Custom APIs",
       ],
-      cta: "Contact Sales",
+      cta: "Request Demo",
       popular: true,
     },
     {
@@ -75,7 +75,7 @@ export function PricingEnterprise() {
         "Dedicated solutions architect",
         "Custom integration support",
       ],
-      cta: "Schedule Consultation",
+      cta: "Request Demo",
       popular: false,
     },
   ]

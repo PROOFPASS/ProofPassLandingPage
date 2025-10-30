@@ -21,19 +21,19 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <HeaderEnterprise />
 
-      {/* ENTERPRISE B2B REDESIGN */}
+      {/* ENTERPRISE B2B REDESIGN - Optimized Flow */}
       <HeroEnterprise />
-      <HowItWorks />
-      <PublicGoodBanner />
-      <CommonsImpact />
       <SocialProofEnterprise />
       <ProblemStatement />
       <SolutionTiers />
+      <HowItWorks />
       <DetailedCaseStudies />
       <ComparisonTableEnterprise />
       <PricingEnterprise />
       <SecurityCompliance />
       <IntegrationDeveloper />
+      <PublicGoodBanner />
+      <CommonsImpact />
       <EnterpriseCTA />
 
       <FooterEnterprise />
