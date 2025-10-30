@@ -6,10 +6,36 @@ import { Button } from "@/components/ui/button"
 export function PricingEnterprise() {
   const plans = [
     {
+      name: "Community",
+      price: "Free",
+      period: "Forever",
+      description: "Self-Hosted Open Source",
+      features: [
+        "Full source code access",
+        "Deploy on your infrastructure",
+        "Complete control & sovereignty",
+        "Community support (Discord)",
+        "All core features included",
+        "No vendor lock-in",
+        "Contribute to roadmap",
+        "AGPLv3 license",
+      ],
+      additional: [
+        "Maintained by the community",
+        "You manage infrastructure",
+        "GitHub: PROOFPASS/ProofPassPlatform",
+        "Perfect for learning & customization",
+      ],
+      cta: "View on GitHub",
+      ctaLink: "https://github.com/PROOFPASS/ProofPassPlatform",
+      popular: false,
+      highlight: "Commons Infrastructure",
+    },
+    {
       name: "Professional",
       price: "199",
       period: "/month",
-      description: "For Growing Teams",
+      description: "Managed SaaS for Teams",
       features: [
         "5,000 attestations/month",
         "50 ZK proofs/month",
@@ -91,13 +117,15 @@ export function PricingEnterprise() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-4 gap-6 mb-12">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-lg border-2 p-8 ${
+              className={`relative bg-white rounded-lg border-2 p-6 ${
                 plan.popular
                   ? "border-accent shadow-lg scale-105"
+                  : plan.highlight
+                  ? "border-secondary shadow-md"
                   : "border-border"
               }`}
             >
@@ -105,6 +133,13 @@ export function PricingEnterprise() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
+                  </span>
+                </div>
+              )}
+              {plan.highlight && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-secondary text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    {plan.highlight}
                   </span>
                 </div>
               )}
@@ -170,12 +205,17 @@ export function PricingEnterprise() {
                 className={`w-full ${
                   plan.popular
                     ? "!bg-accent hover:!bg-accent/90 !text-white"
+                    : plan.highlight
+                    ? "!bg-secondary hover:!bg-secondary/90 !text-white"
                     : "!bg-white border-2 border-accent !text-accent hover:!bg-accent hover:!text-white"
                 }`}
                 size="lg"
                 asChild
               >
-                <a href="#contact">
+                <a
+                  href={plan.ctaLink || "#contact"}
+                  {...(plan.ctaLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
                   {plan.cta}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
