@@ -29,7 +29,7 @@ export function HeroEnterprise() {
                 Groth16 zk-SNARKs
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-orange-100 text-orange-700 rounded-md text-sm font-semibold border border-orange-200">
-                6 Blockchain Networks
+                3 Blockchains (6 Networks)
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-muted text-foreground rounded-md text-sm font-semibold border border-border">
                 ISO 27001

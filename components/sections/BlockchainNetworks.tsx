@@ -43,10 +43,10 @@ export function BlockchainNetworks() {
             Multi-Blockchain Support
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            6 Blockchain Networks
+            3 Blockchains, 6 Networks
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Anchor your credentials on multiple blockchain networks for immutable verification.
+            Anchor your credentials on 3 major blockchains across 6 networks for immutable verification.
             Choose the network that fits your budget and performance needs.
           </p>
         </div>
