@@ -15,7 +15,7 @@ export function SolutionTiers() {
         "W3C DID methods (did:key, did:web)",
         "Ed25519 cryptographic signatures",
         "Batch operations (1000s/minute)",
-        "3 blockchains, 6 networks (Stellar, Optimism, Arbitrum)",
+        "3 blockchains (Stellar, Optimism, Arbitrum)",
         "QR code generation",
         "Webhook notifications",
       ],

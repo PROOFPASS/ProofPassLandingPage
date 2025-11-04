@@ -139,7 +139,7 @@ export function ArchitectureOverview() {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-4">
               <div className="text-accent font-bold mb-2">Blockchain</div>
               <div className="text-sm text-white/90">
-                Multi-chain support: Stellar, Optimism, Arbitrum (6 networks)
+                Multi-chain support: Stellar, Optimism, Arbitrum
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-4">
