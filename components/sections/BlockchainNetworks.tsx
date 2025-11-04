@@ -24,7 +24,7 @@ export function BlockchainNetworks() {
     },
     {
       blockchain: "Arbitrum",
-      networks: ["One", "Sepolia"],
+      networks: ["Mainnet (One)", "Sepolia"],
       type: "Ethereum L2",
       costPerTx: "~$0.0001-$0.001",
       useCase: "Best balance cost/performance",
