@@ -21,7 +21,7 @@ const credential = await toolkit.createCredential({
     capacity: 5000,
     cycleCount: 1000
   },
-  blockchain: 'optimism' // or 'arbitrum', 'stellar'
+  blockchain: 'arbitrum' // or 'optimism', 'stellar'
 });
 
 console.log(credential.did);

@@ -178,9 +178,10 @@ export function BlockchainNetworks() {
             </span>
           </div>
           <pre className="p-6 text-sm overflow-x-auto">
-            <code className="text-white font-mono">{`// Anchor on Stellar (default - ultra-low cost)
+            <code className="text-white font-mono">{`// Anchor on Arbitrum (default - best cost/performance)
 await client.blockchain.anchor({
-  data: 'credential-hash'
+  data: 'credential-hash',
+  network: 'arbitrum'
 });
 
 // Anchor on Optimism (OP Stack ecosystem)
@@ -189,10 +190,10 @@ await client.blockchain.anchor({
   network: 'optimism'
 });
 
-// Anchor on Arbitrum (best cost/performance)
+// Anchor on Stellar (ultra-low cost)
 await client.blockchain.anchor({
   data: 'credential-hash',
-  network: 'arbitrum'
+  network: 'stellar'
 });`}</code>
           </pre>
         </div>
