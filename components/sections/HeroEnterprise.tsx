@@ -122,11 +122,11 @@ export function HeroEnterprise() {
               <div className="mt-6 flex flex-wrap gap-3">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 text-green-700 rounded-md text-xs font-semibold border border-green-200">
                   <CheckCircle2 className="h-3 w-3" />
-                  85%+ Test Coverage
+                  254+ Tests
                 </div>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-700 rounded-md text-xs font-semibold border border-blue-200">
                   <CheckCircle2 className="h-3 w-3" />
-                  100+ Tests
+                  38 Test Suites
                 </div>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-50 text-purple-700 rounded-md text-xs font-semibold border border-purple-200">
                   <CheckCircle2 className="h-3 w-3" />

@@ -44,13 +44,16 @@ export function ArchitectureOverview() {
         "@proofpass/blockchain - Multi-chain integration",
         "@proofpass/client - SDK for applications",
         "@proofpass/types - Shared TypeScript types",
+        "@proofpass/templates - Credential templates",
+        "@proofpass/qr-toolkit - QR code generation",
+        "@proofpass/stellar-sdk - Stellar blockchain SDK",
       ],
     },
   ]
 
   const qualityMetrics = [
-    { label: "Test Coverage", value: "85%+", icon: CheckCircle2 },
-    { label: "Total Tests", value: "100+", icon: CheckCircle2 },
+    { label: "Total Tests", value: "254+", icon: CheckCircle2 },
+    { label: "Test Suites", value: "38", icon: CheckCircle2 },
     { label: "TypeScript", value: "Strict Mode", icon: CheckCircle2 },
     { label: "Code Quality", value: "Production-Ready", icon: CheckCircle2 },
   ]
@@ -127,13 +130,13 @@ export function ArchitectureOverview() {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-4">
               <div className="text-accent font-bold mb-2">Database</div>
               <div className="text-sm text-white/90">
-                PostgreSQL 14+ with Prisma ORM for type-safe queries
+                PostgreSQL with Prisma ORM for type-safe queries & migrations
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-4">
               <div className="text-accent font-bold mb-2">Caching</div>
               <div className="text-sm text-white/90">
-                Redis 7+ for distributed rate limiting & session storage
+                Redis for distributed rate limiting, session storage & queue management
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-4">
@@ -187,7 +190,7 @@ export function ArchitectureOverview() {
               </div>
               <div>
                 <div className="font-semibold text-foreground mb-1">
-                  60+ VC Toolkit Tests
+                  195+ VC Toolkit Tests
                 </div>
                 <div className="text-muted-foreground">
                   Comprehensive credential testing
